@@ -12,7 +12,6 @@ jobs:
 
     steps:
     - uses: actions/setup-python@v4
-    # - uses: actions/checkout@v3
     - name: pitambar
       uses: my-action
       with:
