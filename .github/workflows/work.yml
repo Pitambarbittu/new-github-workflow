@@ -19,7 +19,7 @@ jobs:
     required: true
   input2:
     required: true
-      runs:
+runs:
   using: "composite"
   steps:
     - run: |
