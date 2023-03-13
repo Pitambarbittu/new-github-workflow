@@ -11,11 +11,20 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - uses: actions/setup-python@v4
+    - uses: actions/checkout@v3
     - name: pitambar
-      uses: my-action
-      with:
-      input1: 'value1'
-      input1: 'value2'
+      inputs:
+  input1:
+    required: true
+  input2:
+    required: true
+      runs:
+  using: "composite"
+  steps:
+    - run: |
+        echo "Input 1: ${{ inputs.input1 }}"
+        echo "Input 2: ${{ inputs.input2 }}"
 
         python-version: '3.10'
     - run: python python-file/main.py
