@@ -37,6 +37,6 @@ jobs:
     steps:
     - uses: actions/setup-python@v4
     - uses: actions/checkout@v3
-
+      with:
         python-version: '3.10'
     - run: python python-file/main.py
