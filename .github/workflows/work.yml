@@ -21,13 +21,13 @@ jobs-1:
         echo test, and deploy our project. 
   
 
-jobs:
-  my-job1:
-    runs-on: windows-latest
+# jobs:
+#   my-job1:
+#     runs-on: windows-latest
 
-    steps:
-    - uses: actions/setup-python@v4
-    - uses: actions/checkout@v3
-      with:
-        python-version: '3.10'
-    - run: python python-file/main.py
+#     steps:
+#     - uses: actions/setup-python@v4
+#     - uses: actions/checkout@v3
+#       with:
+#         python-version: '3.10'
+#     - run: python python-file/main.py
