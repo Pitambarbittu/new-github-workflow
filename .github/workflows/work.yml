@@ -6,19 +6,25 @@ on:
 
   workflow_dispatch:
 
+    inputs:
+      name:
+        description: 'Person to greet'
+        defaullt: 'world'
+        required: true
+
 jobs:
-  build:
+  greet:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v3
+      # uses: actions/checkout@v3
 
-      name: Run a one-line script
-      run: hello, cloudEQ!
+      name: send greeting
+      run: echo "hello ${{ github.events.name}}"
 
-      name: Run multii-line script
-      run: |
-        echo ad other actions to build,
-        echo test, and deploy our project. 
+      # name: Run multii-line script
+      # run: |
+      #   echo ad other actions to build,
+      #   echo test, and deploy our project. 
   
 
 # jobs:
