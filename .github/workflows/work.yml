@@ -13,13 +13,11 @@ jobs:
     steps:
     - uses: actions/setup-python@v4
     - uses: actions/checkout@v3
+    - name: pitambar
+      uses: my-action
       with:
-        python-version: '3.10'
+      input1: 'value1'
+      input1: 'value2'
 
-       - name: Prompt user for input
-  run: |
-    read -p "Enter your input: " userInput
-    echo "User input was: $userInput"
-  env:
-    USER_INPUT: ${{ env.userInput }} 
+        python-version: '3.10'
     - run: python python-file/main.py
