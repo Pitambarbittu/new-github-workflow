@@ -8,13 +8,6 @@ on:
 
 jobs-1:
   my-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: My Step
-        uses: my-action
-        with:
-          input1: 'value1'
-          input2: 'value2'
 
   name: My Action
 inputs:
