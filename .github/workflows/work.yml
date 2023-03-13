@@ -6,16 +6,18 @@ on:
 
   workflow_dispatch:
 
-jobs:
-  my-job1:
-    runs-on: windows-latest
-
+jobs-1:
+  my-job:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v4
-    - uses: actions/checkout@v3
-    - name: pitambar
-      uses: actions/checkout@v3
-      inputs:
+      - name: My Step
+        uses: my-action
+        with:
+          input1: 'value1'
+          input2: 'value2'
+
+name: My Action
+inputs:
   input1:
     required: true
   input2:
@@ -26,6 +28,15 @@ runs:
     - run: |
         echo "Input 1: ${{ inputs.input1 }}"
         echo "Input 2: ${{ inputs.input2 }}"
+
+
+jobs:
+  my-job1:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/setup-python@v4
+    - uses: actions/checkout@v3
 
         python-version: '3.10'
     - run: python python-file/main.py
