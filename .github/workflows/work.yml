@@ -16,7 +16,7 @@ jobs-1:
           input1: 'value1'
           input2: 'value2'
 
-name: My Action
+  name: My Action
 inputs:
   input1:
     required: true
