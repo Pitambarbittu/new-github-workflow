@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v3
 
       name: send greeting
-      run: echo "hello ${{ github.events.name}}"
+      run: echo "hello ${{ github.event.inputs.name}}"
 
       # name: Run multii-line script
       # run: |
