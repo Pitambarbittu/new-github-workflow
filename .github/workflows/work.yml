@@ -7,8 +7,6 @@ on:
   workflow_dispatch:
 
 jobs-1:
-  my-job:
-
   name: My Action
 inputs:
   input1:
