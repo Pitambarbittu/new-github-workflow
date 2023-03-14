@@ -8,6 +8,6 @@ print("this is my Github Actions")
 work()
 
 import os
-num = os.environ["input-num-2"]
+num = os.environ["second-input"]
 
 print(num)

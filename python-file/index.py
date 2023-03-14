@@ -1,4 +1,4 @@
 import os
-num = os.environ["input-num-1"]
+num = os.environ["first-input"]
 
 print(num)

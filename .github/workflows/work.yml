@@ -6,11 +6,11 @@ on:
 
   workflow_dispatch:
     inputs:
-      input-num-1: 
+      first-input: 
         description: "First input"
         required: true
 
-      input-num-2: 
+      second-input: 
           description: "Second input"
           required: true
 
@@ -18,8 +18,8 @@ env:
   file: python-file/index.py
   file1: python-file/main.py
 
-  input-num-1: ${{github.event.inputs.input-num-1}}
-  input-num-2: ${{github.event.inputs.input-num-2}}
+  first-input: ${{github.event.inputs.first-input}}
+  second-input: ${{github.event.inputs.second-input}}
 
 jobs:
 
@@ -31,13 +31,13 @@ jobs:
       - uses: actions/setup-python@v2
 
       - name: Run a one-line script
-        run: python $file $input-num-1
+        run: python $file $first-input
 
       - name: Run a multi-line script
         run: echo $msg
 
   job2:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -45,7 +45,7 @@ jobs:
       
       - name: Run a second-line script
         run: |
-          python $file1 $input-num-2
+          python $file1 $second-input
 
   job3:
     runs-on: windows-latest
