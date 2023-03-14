@@ -15,8 +15,8 @@ on:
           required: true
 
 env:
-  file: python-file/python.py
-  file1: python-file/document.py
+  file: python-file/index.py
+  file1: python-file/main.py
 
   input-num-1: ${{github.event.inputs.input-num-1}}
   input-num-2: ${{github.event.inputs.input-num-2}}
@@ -55,23 +55,3 @@ jobs:
         run: |
           python $file1 $input-num-2
 
-jobs:
-  my-job1:
-    runs-on: windows-latest
-
-    steps:
-      - uses: actions/setup-python@v4
-      - uses: actions/checkout@v3
-        with:
-          python-version: "3.10"
-      - run: python python-file/main.py
-
-  my-job2:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-      - run: python python-file/main.py
