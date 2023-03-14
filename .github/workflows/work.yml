@@ -15,6 +15,7 @@ on:
       choice:
         type: choice
         description: Make a choice
+        required: true
         options:
         - AWS
         - AZURE
