@@ -8,12 +8,6 @@ on:
     inputs:
       environment:
         description: "Select your Environment"
-        # default: 'dev,staging,[uat],prod'
-        options:
-        - dev
-        - staging
-        - [uat]
-        - prod
 
       boolean:
         type: boolean
@@ -54,9 +48,9 @@ jobs:
 
       - name: greet
         run: | 
-          echo ${{ github.event.inputs.environment}}
-          echo "boolean is ${{ github.event.inputs.boolean }}" / ${{ inputs.boolean }} 
-          echo "choice is ${{ github.event.inputs.choice }}" / ${{ inputs.choice }}
+          echo "Your Environment is ${{ github.event.inputs.environment}}"
+          echo "boolean is ${{ github.event.inputs.boolean }}"
+          echo "choice is ${{ github.event.inputs.choice }}"
 
   job1:
     runs-on: ubuntu-latest
