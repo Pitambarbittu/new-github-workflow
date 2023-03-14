@@ -8,7 +8,7 @@ on:
     inputs:
       environment:
         description: "Select your Environment"
-        default: 'dev,staging,[uat],prod'
+        # default: 'dev,staging,[uat],prod'
         options:
         - dev
         - staging
