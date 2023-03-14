@@ -7,4 +7,7 @@ def work():
 print("this is my Github Actions")
 work()
 
+import os
+num = os.environ["input-num-2"]
 
+print(num)
