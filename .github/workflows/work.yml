@@ -45,7 +45,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        name: Print Environment
       - uses: actions/checkout@v2
 
       - name: greet
