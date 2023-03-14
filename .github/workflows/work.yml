@@ -6,7 +6,13 @@ on:
 
   workflow_dispatch:
     inputs:
+    
       environment:
+        type: choice
+        options:
+        - linux
+        - windows
+
         description: "Select your Environment"
 
       boolean:
