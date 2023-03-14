@@ -6,6 +6,20 @@ on:
 
   workflow_dispatch:
     inputs:
+
+      boolean:
+        type: boolean
+        description: True
+        description: False
+
+      choice:
+        type: choice
+        description: Make a choice
+        options:
+        - AWS
+        - AZURE
+        - NEWRALIC
+
       first-input: 
         description: "First input"
         required: true
