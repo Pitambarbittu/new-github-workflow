@@ -9,8 +9,8 @@ on:
 
       boolean:
         type: boolean
-        description: True
-        description: False
+        description: True or False
+        # description: False
 
       choice:
         type: choice
