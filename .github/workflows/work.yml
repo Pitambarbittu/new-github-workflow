@@ -9,6 +9,11 @@ on:
       environment:
         description: "Select your Environment"
         default: 'dev,staging,[uat],prod'
+        options:
+        - dev
+        - staging
+        - [uat]
+        - prod
 
       boolean:
         type: boolean
